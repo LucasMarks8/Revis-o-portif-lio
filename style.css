@@ -79,9 +79,76 @@ a {
 }
 
 .my-name {
-    color: #21a6f0;
-    background-image: linear-gradient(to right,  #21a6f0, #13B0F5,  #42446E);
+    background-image: linear-gradient(to right, #21a6f0, #13B0F5, #42446E);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+.about-me,
+.work-experience,
+.education {
+    color: #42446E;
+}
+
+.about-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 25px;
+    width: 50rem;
+    margin-top: 145px;
+    margin-bottom: 145px;
+}
+
+.title {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 52px;
+    letter-spacing: -0.4px;
+}
+
+.text {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    margin-top: 20px;
+    color:#666666
+}
+
+.work-experience {
+    margin-top: 30px;
+}
+
+.title-jobs {
+    display: flex;
+    justify-content: space-between;
+    width: 50rem;
+    margin-top: 20px;
+    font-size: 20px;
+    color: #666666;
+}
+
+.icons-jobs {
+    display: flex;
+    justify-content: space-between;
+    width: 50rem;
+    margin-top: 20px;
+    color: #A7A7A7;
+}
+
+.education {
+    margin-top: 30px;
+}
+
+.engenharia {
+    display: flex;
+    justify-content: space-between;
+    width: 50rem;
+    margin-top: 20px;
 }
