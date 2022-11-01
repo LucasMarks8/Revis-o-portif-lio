@@ -10,24 +10,32 @@ a {
 }
 
 .page-wraper {
-    width: 1200px;
-    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    padding-top: 3rem;
+    background-color: #F5F5F5;
+    min-height: 100vh;
+    justify-content: space-between;
+    padding-bottom: 3rem;
 }
 
 .header {
     display: flex;
-    justify-content: flex-end;
+    flex-wrap: wrap;
+    justify-content: center;
     color: #666666;
-    flex-direction: row;
     height: 55px;
+    width: 100%;
 }
 
 .nav-group-logo {
     color: #cd23b3;
     font-style: italic;
     font-weight: bold;
-    margin-right: auto;
     display: flex;
+    flex-grow: 1;
     justify-content: center;
     align-items: center;
     font-family: 'DM Sans', sans-serif;
@@ -35,13 +43,16 @@ a {
 }
 
 .nav-group-page-itens {
+    flex-wrap: wrap;
     width: 610px;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
-    margin-right: 50px;
+    gap: 3.5rem;
     font-family: 'DM Sans', sans-serif;
     font-size: 20px;
+    flex-grow: 1;
+    padding-right: 3rem;
 }
 
 .nav-group-page-itens a:hover {
@@ -53,29 +64,48 @@ a {
 }
 
 .nav-group-social-icons {
-    width: 130px;
+    flex-wrap: wrap;
+    padding-left: 1.5rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    flex-grow: 0.5;
+    gap: 1rem;
 }
 
 .section-home {
-    min-height: calc(100vh - 55px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+}
+
+.full-time {
+    border: 1px solid black;
+    background-color: greenyellow;
+    border-radius: 25px;
+    width: 100px;
+    text-align: center;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .section-home-item {
-    flex-grow: 1;
     font-family: 'Poppins', sans-serif;
     font-size: 28px;
     color: #42446e;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    width: 70%;
 }
 
 .profile-img {
+    border: 9px solid transparent;
     border-radius: 50%;
+    background: linear-gradient(to right, #21a6f0, #13B0F5, #42446E);
+    width: 400px;
+    height: 400px;
 }
 
 .my-name {
@@ -85,21 +115,23 @@ a {
     -webkit-text-fill-color: transparent;
 }
 
-.about-me,
-.work-experience,
-.education {
+.work-experience {
     color: #42446E;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
 }
 
 .about-container {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: baseline;
-    gap: 25px;
-    width: 50rem;
-    margin-top: 145px;
-    margin-bottom: 145px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
 }
 
 .title {
@@ -109,6 +141,10 @@ a {
     font-size: 42px;
     line-height: 52px;
     letter-spacing: -0.4px;
+    display: flex;
+    justify-content: space-between;
+    width: 50rem;
+    margin-top: 20px;
 }
 
 .text {
@@ -118,11 +154,10 @@ a {
     font-size: 18px;
     line-height: 26px;
     margin-top: 20px;
-    color:#666666
-}
-
-.work-experience {
-    margin-top: 30px;
+    color: #666666;
+    display: flex;
+    justify-content: space-between;
+    width: 50rem;
 }
 
 .title-jobs {
@@ -142,13 +177,184 @@ a {
     color: #A7A7A7;
 }
 
-.education {
-    margin-top: 30px;
+.icon-jobs-span {
+    width: 15rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 
-.engenharia {
+.icon-adress-span {
+    width: 15rem;
     display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-date-span {
+    width: 15rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.tech-container {
+    color: #42446E;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+}
+
+.icons-unit {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 2rem;
+    padding-top: 5rem;
+    justify-items: center;
+    align-content: center;
+    width: 100%;
+}
+
+.project-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+}
+
+.project-text {
+    color: #42446E;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 52px;
+    letter-spacing: -0.4px;
+}
+
+.cards-container {
+    width: 70%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    align-content: center;
+    gap: 2rem;
+    padding-bottom: 10rem;
+}
+
+.cards {
+    width: 400px;
+    height: 650px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-radius: 25px;
+    background-color: white;
+}
+
+.card-img {
+    width: 400px;
+    height: 300px;
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+}
+
+.card-h1 {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 26px;
+    padding-top: 2rem;
+}
+
+.card-description {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 26px;
+    padding-top: 2rem;
+    color: #666666;
+}
+
+.card-span {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    padding-top: 2rem;
+    color: #42446E;
+}
+
+.card-icon {
+    display: flex;
+    width: 70%;
     justify-content: space-between;
-    width: 50rem;
-    margin-top: 20px;
+    padding-top: 2rem;
+}
+
+.icon-span {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.section-contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #42446E;
+    width: 70%;
+}
+
+.h1-contact {
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 58px;
+    line-height: 70px;
+    color: #1E0E62;
+}
+
+.email-contact {
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 58px;
+    line-height: 70px;
+    background: linear-gradient(90deg, #13B0F5 -2.06%, #E70FAA 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: #666666;
+    height: 55px;
+    width: 100%;
 }
